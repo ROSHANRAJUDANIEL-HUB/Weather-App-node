@@ -1,0 +1,66 @@
+body {
+  color: rgb(146, 137, 137);
+  font-style: oblique;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 20px;
+  background-image: url("/images/weather.jpg");
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex-basis: 1;
+}
+footer {
+  color: rgb(15, 15, 15);
+  font-weight: bold;
+
+  padding: 16px;
+  margin-top: 10px;
+}
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+header a {
+  color: indigo;
+  margin-left: 80px;
+  font-size: 20px;
+}
+
+p {
+  color: blue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+button {
+  cursor: pointer;
+  font-size: 28px;
+  margin-top: 5px;
+}
+
+input {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
