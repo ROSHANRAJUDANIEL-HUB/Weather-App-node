@@ -12,6 +12,10 @@ const forecast = require("./forecast");
 
 const app = express();
 
+// heroku port
+
+const port = process.env.PORT || 3000;
+
 app.use(express.static(filepath));
 
 app.set("view engine", "hbs");
@@ -91,6 +95,6 @@ app.get("*", (req, res) => {
 });
 
 // starting up our server
-app.listen(3000, () => {
-  console.log("server is listening to port:3000");
+app.listen(port, () => {
+  console.log("server is listening to port", port);
 });
