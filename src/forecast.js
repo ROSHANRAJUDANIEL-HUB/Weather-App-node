@@ -5,8 +5,7 @@ const forecast = (lat, long, callback) => {
     "http://api.weatherstack.com/current?access_key=299d5c0579093dd6b221ecf13e598d45&query=" +
     lat +
     "," +
-    long +
-    "&units=f";
+    long;
   request({ url, json: true }, (error, { body }) => {
     if (error) {
       callback("cannot get weather data", undefined);
@@ -18,10 +17,12 @@ const forecast = (lat, long, callback) => {
         body.current.weather_descriptions[0] +
           ".currently it is: " +
           body.current.temperature +
-          " F degrees" +
+          "  degrees" +
           ".it feels like " +
           body.current.feelslike +
-          " F degrees out."
+          "  degrees out." +
+          "The humidity is:" +
+          body.current.humidity
       );
     }
   });
